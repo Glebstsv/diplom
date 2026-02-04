@@ -5,7 +5,7 @@ import HomePage from "./pages/HomePage/HomePage";
 
 function App() {
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/diplom">
       <Routes>
         <Route path="/" element={<HomePage />} />
       </Routes>
