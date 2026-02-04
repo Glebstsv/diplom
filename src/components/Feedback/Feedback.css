@@ -1,0 +1,147 @@
+.feedback {
+    padding: 152px 268px 0 252px;
+}
+
+.feedback__title {
+    margin-bottom: 72px;
+    font-weight: 500;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #292929;
+}
+
+.feedback__content {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 137px;
+    user-select: none;
+}
+
+.feedback__slider {
+    display: flex;
+    transition: transform 0.3s ease-out;
+    cursor: grab;
+    will-change: transform;
+}
+
+.feedback__slider:active {
+    cursor: grabbing;
+}
+
+.feedback__slide {
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.feedback__item {
+    display: flex;
+    flex-direction: row;
+}
+
+.feedback__item--first {
+    width: 700px;
+    margin-right: 28px;
+}
+
+.feedback__item--last {
+    margin-top: -7px;
+}
+
+/* Review styles */
+.review__title {
+    margin: 24px 0 21px -6px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.review__image {
+    height: 206px;
+    margin-right: 44px;
+    object-fit: cover;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.feedback__item--last .review__image {
+    height: 199px;
+    margin-right: 42px;
+}
+
+.review__text {
+    max-width: 389px;
+    position: relative;
+    margin: 0 0 0 -6px;
+    padding: 0 20px;
+    font-weight: 300;
+    font-size: 18px;
+    font-style: italic;
+    color: #928f94;
+}
+
+.review__text::before,
+.review__text::after {
+    content: '"';
+    position: absolute;
+    font-size: 36px;
+    color: #928f94;
+    font-family: serif;
+    line-height: 1;
+}
+
+.review__text::before {
+    left: 0;
+    top: -5px;
+}
+
+.review__text::after {
+    right: 0;
+    bottom: -15px;
+}
+
+.review__quote {
+    fill: #928F94;
+}
+
+.review__quote--left {
+    position: absolute;
+    left: -16px;
+    top: 0;
+}
+
+.review__quote--right {
+    margin-left: 10px;
+}
+
+.feedback__item--first .review__quote--right {
+    margin-left: 18px;
+}
+
+/* Pagination styles */
+.feedback__pagination {
+    padding-bottom: 118px;
+    margin: -5px 0 0 19px;
+    text-align: center;
+}
+
+.feedback__pagination-btn {
+    height: 20px;
+    width: 20px;
+    margin-right: 11px;
+    background: #e5e5e5;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feedback__pagination-btn:hover:not(:disabled) {
+    background: #d4d4d4;
+}
+
+.feedback__pagination-btn--active {
+    background: #c4c4c4;
+    cursor: default;
+}

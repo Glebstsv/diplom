@@ -1,0 +1,33 @@
+.banner {
+    position: relative;
+    background: rgba(41, 41, 41, 0.6);
+}
+
+.banner__title {
+    position: absolute;
+    bottom: 241px;
+    left: 288px;
+    max-width: 500px;
+    margin-left: 60px;
+    font-weight: 100;
+    font-size: 72px;
+    color: #fff;
+}
+
+.banner--home {
+    height: 985px;
+}
+
+.banner--home::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1920px;
+    height: 8px;
+    background-color: #FFA800;
+}
+
+.banner--trains {
+    height: 592px;
+}

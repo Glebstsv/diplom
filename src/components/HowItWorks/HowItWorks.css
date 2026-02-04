@@ -1,0 +1,77 @@
+.how-it-works {
+    position: relative;
+    background-image: url(../../assets/hiw/hiw-background.png)
+}
+
+.how-it-works__container {
+    padding: 60px 268px 106px 250px;
+}
+
+.how-it-works__header {
+    margin-bottom: 97px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.how-it-works__button {
+    width: 325px;
+    height: 60px;
+    background-color: rgba(28, 28, 28, 0);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.how-it-works__button:hover {
+    background: #ffca62;
+    color: #2d2b2f;
+    transition: 0.3s;
+}
+
+.how-it-works__button:active {
+    background: #fff;
+}
+
+.how-it-works__title {
+    font-weight: 500;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.how-it-works__list {
+    display: flex;
+    flex-direction: row;
+    gap: 137px;
+}
+
+.how-it-works__item {
+    width: 225px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.how-it-works__item:first-child {
+    margin-left: 229px;
+}
+
+.how-it-works__item-image {
+    margin-bottom: 34px;
+}
+
+.how-it-works__item:last-child .how-it-works__item-image {
+    margin-bottom: 29px;
+}
+
+.how-it-works__item-text {
+    width: 226px;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: #e5e5e5;
+}
