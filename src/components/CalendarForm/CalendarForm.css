@@ -1,0 +1,217 @@
+.calendar-form {
+    position: relative;
+}
+
+.calendar-form--main-page {
+    position: absolute;
+    z-index: 999;
+    width: 324px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+.calendar-form--main-page.calendar-form--there {
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+}
+
+.calendar-form--main-page.calendar-form--back {
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+}
+
+.calendar-form--train.calendar-form--there {
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+}
+
+.calendar-form--train.calendar-form--back {
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+}
+
+.calendar-form__calendar {
+    width: 100%;
+    border: none;
+    font-family: inherit;
+}
+
+.calendar-form__calendar .react-calendar__navigation {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calendar-form__calendar .react-calendar__navigation__arrow.react-calendar__navigation__prev2-button,
+.calendar-form__calendar .react-calendar__navigation__arrow.react-calendar__navigation__next2-button {
+    display: none;
+}
+
+.calendar-form__calendar .react-calendar__navigation__label {
+    background-color: transparent;
+    border: none;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0 10px;
+    color: #292929;
+    flex-grow: 1;
+}
+
+.calendar-form__calendar .react-calendar__navigation__arrow.react-calendar__navigation__prev-button,
+.calendar-form__calendar .react-calendar__navigation__arrow.react-calendar__navigation__next-button {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #292929;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.calendar-form__calendar .react-calendar__navigation__arrow.react-calendar__navigation__prev-button:hover,
+.calendar-form__calendar .react-calendar__navigation__arrow.react-calendar__navigation__next-button:hover {
+    color: #ffa800;
+}
+
+.calendar-form__calendar .react-calendar__navigation__arrow.react-calendar__navigation__prev-button:disabled,
+.calendar-form__calendar .react-calendar__navigation__arrow.react-calendar__navigation__next-button:disabled {
+    color: #e0e0e0;
+    cursor: not-allowed;
+}
+
+.calendar-form__calendar .react-calendar__navigation__arrow.react-calendar__navigation__prev-button svg,
+.calendar-form__calendar .react-calendar__navigation__arrow.react-calendar__navigation__next-button svg {
+    width: 8px;
+    height: 14px;
+}
+
+.calendar-form__calendar .react-calendar__viewContainer {
+    padding: 10px;
+}
+
+.calendar-form__calendar .react-calendar__month-view__weekdays__weekday {
+    display: none;
+}
+
+.calendar-form__calendar .react-calendar__tile.react-calendar__month-view__days__day {
+    font-size: 16px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: none;
+    color: #292929;
+    transition: all 0.2s ease;
+}
+
+.calendar-form__calendar .react-calendar__tile.react-calendar__month-view__days__day:hover {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.calendar-form__calendar .react-calendar__tile.react-calendar__month-view__days__day:disabled {
+    color: #e0e0e0;
+    background-color: transparent;
+}
+
+.calendar-form__calendar--weekend {
+    font-weight: bold;
+}
+
+.calendar-form__calendar .react-calendar__tile.react-calendar__tile--active.react-calendar__tile--range.react-calendar__tile--rangeStart.react-calendar__tile--rangeEnd.react-calendar__tile--rangeBothEnds.react-calendar__month-view__days__day {
+    background-color: #ffa800 !important;
+    color: #fff !important;
+    border-radius: 4px;
+}
+
+.calendar-form__calendar .react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--neighboringMonth {
+    color: #e0e0e0;
+}
+
+.calendar-form__calendar .react-calendar__tile {
+    padding: 10px;
+    font-size: 16px;
+    color: #292929;
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.calendar-form__calendar .react-calendar__tile:hover {
+    background-color: #f5f5f5;
+}
+
+.calendar-form__calendar .react-calendar__tile--now {
+    background-color: #fff3e0;
+    color: #ffa800;
+}
+
+.calendar-form__calendar .react-calendar__tile--hasActive {
+    background-color: #ffa800;
+    color: #fff;
+}
+
+.calendar-form__calendar .react-calendar__tile--active {
+    background-color: #ffa800;
+    color: #fff;
+}
+
+.calendar-form__calendar .react-calendar__year-view__months__month,
+.calendar-form__calendar .react-calendar__decade-view__years__year {
+    flex: 0 0 33.3333%;
+    padding: 15px 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.calendar-form__calendar .react-calendar__year-view__months__month abbr,
+.calendar-form__calendar .react-calendar__decade-view__years__year abbr {
+    text-decoration: none;
+    font-size: 16px;
+    color: inherit;
+}
+
+.calendar-form__calendar .react-calendar__year-view__months__month:hover,
+.calendar-form__calendar .react-calendar__decade-view__years__year:hover {
+    background-color: #f5f5f5;
+}
+
+.calendar-form__calendar .react-calendar__year-view__months__month--active,
+.calendar-form__calendar .react-calendar__decade-view__years__year--active {
+    background-color: #ffa800;
+    color: #fff;
+}
+
+.calendar-form__calendar .react-calendar__year-view__months__month--now,
+.calendar-form__calendar .react-calendar__decade-view__years__year--now {
+    background-color: #fff3e0;
+    color: #ffa800;
+}
+
+.calendar-form__calendar .react-calendar__year-view__months__month:disabled,
+.calendar-form__calendar .react-calendar__decade-view__years__year:disabled {
+    background-color: transparent;
+    color: #e0e0e0;
+    cursor: not-allowed;
+}
+
+.calendar-form__calendar .react-calendar__year-view__months__month:disabled abbr,
+.calendar-form__calendar .react-calendar__decade-view__years__year:disabled abbr {
+    color: #e0e0e0;
+}

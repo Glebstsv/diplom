@@ -1,0 +1,232 @@
+.search-form {
+    position: absolute;
+    bottom: 0;
+    right: 233px;
+    width: 729px;
+    background-color: rgba(41, 41, 41, 0.8);
+}
+
+.search-form__container {
+    display: flex;
+    flex-direction: column;
+    padding: 77px 24px 0 22px;
+}
+
+.search-form__block {
+    margin-bottom: 61px;
+}
+
+.search-form__block--date {
+    margin-bottom: 92px;
+}
+
+.search-form__block--controls {
+    margin-bottom: 52px;
+}
+
+.search-form__title {
+    margin-bottom: 7px;
+    font-weight: 300;
+    font-size: 30px;
+    color: #fff;
+}
+
+.search-form--main-page .search-form__title {
+    margin: 0 0 15px 6px;
+}
+
+.search-form__input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+
+.search-form__input {
+    width: 325px;
+    height: 60px;
+    padding: 19px 0 24px 21px;
+    cursor: pointer;
+    border-radius: 3px;
+    background: #fff;
+    background-repeat: no-repeat;
+    background-position: 95%;
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #292929;
+}
+
+.search-form__input--route {
+    background-image: url(../../assets/search/location.png);
+}
+
+.search-form__input--date {
+    text-transform: uppercase;
+    background-image: url(../../assets/search/form-data.png);
+}
+
+.search-form__input:focus {
+    outline: none;
+}
+
+.search-form__route-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-image: url(../../assets/search/reset.png);
+}
+
+.search-form__button {
+    width: 323px;
+    height: 60px;
+    margin-left: 361px;
+    padding-left: 6px;
+    border-radius: 5px;
+    border: none;
+    background: #ffa800;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #292929;
+}
+
+.search-form--main-page .search-form__button {
+    margin-bottom: 8px;
+}
+
+.search-form__button:hover {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: #ffa800;
+}
+
+.search-form__button:active {
+    color: #ffa800;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border: 1px solid #ffa800;
+}
+
+.search-form--trains {
+    position: absolute;
+    width: 1490px;
+    margin: 0 auto;
+    top: 269px;
+    left: 215px;
+}
+
+.search-form--trains .search-form__container {
+    padding: 28px 42px 76px 52px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.search-form--trains .search-form__block--route {
+    max-width: 690px;
+    margin-right: 35px;
+}
+
+.search-form--trains .search-form__block--date {
+    max-width: 685px;
+}
+
+.search-form--trains .search-form__block--controls {
+    margin-top: -37px;
+    margin-bottom: 0;
+}
+
+.search-form__route-wrapper {
+    position: relative;
+    width: 325px;
+}
+
+.search-form__city-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: 5px;
+    z-index: 1;
+}
+
+.search-form__city-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 57px;
+    background: #F5F4F6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+}
+
+.search-form__city-items > p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    font-variant: small-caps;
+    color: #292929;
+    cursor: pointer;
+    padding: 4px 4px;
+    transition: background-color 0.2s ease;
+}
+
+.search-form__city-items > p:hover {
+    background-color: #2929293a;
+}
+
+.search-form__city-list--none,
+.search-form__city-list--none-transform {
+    display: none;
+}
+
+.search-form--trains .search-form__city-list--city-from,
+.search-form--trains .search-form__city-list--city-to {
+    position: relative;
+    top: 0;
+}
+
+.search-form--trains .search-form__city-list--city-to {
+    left: 350px;
+}
+
+.search-form--trains .search-form__input--there {
+    margin-right: 35px;
+}
+
+.search-form__date-wrapper {
+    position: relative;
+    width: 325px;
+}
+
+.search-form__date-wrapper > div {
+    position: absolute;
+    z-index: 10;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.react-calendar {
+    background-color: #fff !important;
+    border: none !important;
+    border-radius: 3px;
+}
+
+.search-form__input-container--date {
+    display: flex;
+    gap: 35px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none; 
+}
+

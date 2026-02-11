@@ -5,9 +5,9 @@ export const getSubscribe = createAsyncThunk(
     async (mail) => {
         const response = await fetch(`https://students.netoservices.ru/fe-diplom/subscribe?email=${mail}`, {
             method: 'POST',
-            body: JSON.stringify(mail)
+            body: JSON.stringify({ email: mail })
         });
-        return response.data;
+        return await response.json();
     }
 );
 
@@ -16,7 +16,10 @@ const subscribeSlice = createSlice({
     initialState: {
         open: false,
         status: '',
-        text: ''
+        text: '',
+        loading: false,
+        error: null,
+        items: []
     },
     reducers: {
         changePopup: (state, { payload }) => {
@@ -39,14 +42,20 @@ const subscribeSlice = createSlice({
         builder
             .addCase(getSubscribe.pending, (state) => {
                 state.loading = true;
+                state.error = null;
             })
             .addCase(getSubscribe.fulfilled, (state, { payload }) => {
                 state.loading = false;
                 state.items = payload;
+                state.open = true;
+                state.status = 'success';
             })
             .addCase(getSubscribe.rejected, (state, { error }) => {
                 state.loading = false;
-                state.error = error;
+                state.error = error.message;
+                state.open = true;
+                state.status = 'error';
+                state.text = 'Ошибка подписки';
             });
     }
 });

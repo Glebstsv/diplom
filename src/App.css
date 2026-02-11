@@ -27,7 +27,7 @@ a:hover {
 }
 
 #root {
-  width: 1920px;
+  width: 100%;
   height: auto;
   margin: auto;
   font-family: 'Roboto';
