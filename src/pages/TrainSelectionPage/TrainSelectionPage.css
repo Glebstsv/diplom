@@ -1,0 +1,23 @@
+.selection {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.selection__main {
+    padding: 92px 256px 0 259px;
+    display: flex;
+    flex-direction: row;
+    background-color: #E5E5E5;
+    flex: 1 0 auto;
+}
+
+.selection__section {
+    flex: 1;
+}
+
+.selection__trains {
+    width: 960px;
+    margin-top: -7px;
+    margin-left: 83px;
+}

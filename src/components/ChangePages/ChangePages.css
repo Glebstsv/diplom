@@ -1,0 +1,46 @@
+.pagination {
+    margin-top: 142px;
+    margin-bottom: 193px;
+}
+
+.pagination__list {
+    display: flex;
+}
+
+.pagination__button {
+    width: 85px;
+    height: 75px;
+    margin-left: 35px;
+    border: 2px solid #C4C4C4;
+    border-radius: 5px;
+    cursor: pointer;
+    background: none;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: #928F94;
+}
+
+.pagination__button--prev {
+    margin-left: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../assets/train-card/prevpage.png);
+}
+
+.pagination__button--next {
+    background-image: url(../../assets/train-card/nextpage.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pagination__button--active {
+    color: #FFA800;
+    border: 2px solid #FFA800;
+}
+
+.pagination__button:hover {
+    background-color: #FFA800;
+    color: #FFFFFF;
+    transition: color 200ms ease-in-out, background-color 300ms ease-in-out;
+}

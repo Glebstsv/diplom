@@ -1,0 +1,82 @@
+.filter-route {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.filter-route__found {
+    display: flex;
+    margin-right: auto;
+}
+
+.filter-route__sort {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.filter-route__text {
+    margin-right: 5px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #928F94;
+}
+
+.filter-route__show {
+    display: flex;
+    margin-left: 5px;
+}
+
+.filter-route__buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-route__button {
+    background-color: transparent;
+    border: none;
+    color: #928F94;
+    font-weight: 400;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.filter-route__button--active {
+    color: #292929;
+}
+
+.filter-route__select__control {
+    width: 140px !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+.filter-route__select__control--menu-is-open,
+.filter-route__select__menu {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) !important;
+    border-radius: 0 !important;
+    background: #f7f5f9 !important;
+}
+
+.filter-route__select__menu {
+    width: 140px !important;
+    margin-top: 0 !important;
+    border: none !important;
+    color: #292929;
+}
+
+.filter-route__select__option--is-focused,
+.filter-route__select__option--is-selected {
+    background-color: #ffa800 !important;
+}
+
+.filter-route__select__indicators {
+    display: none !important;
+}
+
+.filter-route__select__placeholder {
+    margin: 0;
+}

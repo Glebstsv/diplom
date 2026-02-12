@@ -1,0 +1,91 @@
+.filter-time {
+    padding: 24px 35px 0 32px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.filter-time--back {
+    border-bottom: none;
+}
+
+.filter-time__header {
+    margin-top: 3px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.filter-time__icon {
+    width: 32px;
+    height: 26px;
+    margin-right: 12px;
+}
+
+.filter-time__icon--to {
+    background-image: url(../../assets/widget/Subtract.png)
+}
+
+.filter-time__icon--back {
+    background-image: url(../../assets/widget/Subtract2.png)
+}
+
+.filter-time__title {
+    margin-right: auto;
+    font-weight: 700;
+    font-size: 30px;
+    color: #fff;
+}
+
+.filter-time__title--back {
+    margin-right: 106px;
+}
+
+.filter-time__toggle {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.filter-time__toggle--expanded {
+    background-image: url(../../assets/widget/hide.png)
+}
+
+.filter-time__toggle--collapsed {
+    background-image: url(../../assets/widget/show.png)
+}
+
+.filter-time__body {
+    margin-bottom: 46px;
+}
+
+.filter-time__body--hidden {
+    display: none;
+}
+
+.filter-time__body--arrival {
+    margin-bottom: 30px;
+}
+
+.filter-time__subtitle {
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 24px;
+    color: #e5e5e5;
+}
+
+.filter-time__subtitle--arrival {
+    text-align: right;
+}
+
+.filter-time__range-numbers {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+}

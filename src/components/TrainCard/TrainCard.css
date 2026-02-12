@@ -1,0 +1,227 @@
+.train {
+    display: flex;
+    width: 960px;
+    min-height: 270px;
+    margin-bottom: 47px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.train__header {
+    width: 196px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #e4dfe9;
+}
+
+.train__icon {
+    width: 86px;
+    height: 86px;
+    margin: 32px 0 17px 42px;
+}
+
+.train__name {
+    margin-bottom: 15px;
+    margin-left: 43px;
+    font-weight: 500;
+    font-size: 24px;
+    color: #3e3c41;
+}
+
+.train__route {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 16px;
+    color: #292929;
+}
+
+.train__direction {
+    width: 479px;
+    padding: 54px 36px 0 39px;
+    border-right: 1px dashed #e5e5e5;
+}
+
+.train__path {
+    margin-bottom: 66px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.train__time {
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+}
+
+.train__arrow {
+    width: 13px;
+    height: 7px;
+    margin-left: 5px;
+    margin-bottom: 3px;
+    background-image: url(../../assets/train-card/direction-arrow.png);
+    background-repeat: no-repeat;
+}
+
+.train__city {
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #292929;
+}
+
+.train__city-arrow {
+    display: inline-block;
+}
+
+.train__direction-arrow {
+    width: 30px;
+    height: 20px;
+    margin-top: 7px;
+    margin-left: 7px;
+    background-repeat: no-repeat;
+}
+
+.train__direction-arrow--to {
+    background-image: url(../../assets/train-card/train-arrow.png);
+}
+
+.train__direction-arrow--back {
+    background-image: url(../../assets/train-card/train-arrow-back.png);
+}
+
+.train__duration {
+    font-weight: 400;
+    font-size: 18px;
+    color: #c4c4c4;
+}
+
+.train__station {
+    font-weight: 400;
+    font-size: 16px;
+    color: #928f94;
+}
+
+.train__seats {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 41px;
+    padding-bottom: 22px;
+}
+
+.train__seat {
+    width: 234px;
+    height: 29px;
+    margin-left: 27px;
+    margin-bottom: 29px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.train__seat--last {
+    margin-bottom: auto;
+}
+
+.train__seat-class {
+    margin-right: auto;
+    font-weight: 400;
+    font-size: 16px;
+    color: #3e3c41;
+}
+
+.train__seat-count {
+    margin-right: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffa800;
+}
+
+.train__price {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.train__price-text {
+    margin-right: 6px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #928f94;
+}
+
+.train__price-value {
+    margin-right: 7px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #2d2b2f;
+}
+
+.train__currency {
+    width: 16px;
+    height: 19px;
+    background-image: url(../../assets/train-card/currency.png)
+}
+
+.train__options {
+    height: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.train__option {
+    margin-right: 16px;
+}
+
+.train__option:last-child {
+    margin-right: 0;
+}
+
+.train__button {
+    width: 228px;
+    height: 39px;
+    background: #ffa800;
+    border-radius: 5px;
+    border: none;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+}
+
+.train__button:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: filter 200ms ease-in-out;
+}
+
+.train__button:focus {
+    border: 1px solid #FFA800;
+    background-color: transparent;
+    color: #FFA800;
+}
+
+.train__button--order {
+    background: transparent;
+    border: 1px solid #292929;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: #292929;
+}
+
+.train__available {
+    width: 276px;
+    left: 0;
+    justify-content: space-between;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F4F6;
+}

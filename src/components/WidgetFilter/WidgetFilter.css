@@ -1,0 +1,241 @@
+.aside-widgets {
+    width: 360px;
+}
+
+.filter-dates,
+.filter-checkboxes,
+.filter-price {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.widget-filter {
+    width: 360px;
+    margin-bottom: 93px;
+}
+
+.widget-filter__container {
+    display: flex;
+    flex-direction: column;
+    background: #3E3C41;
+}
+
+.widget-filter__dates,
+.widget-filter__options,
+.widget-filter__price {
+    padding: 0 28px 15px 36px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.widget-filter__date {
+    margin-bottom: 26px;
+}
+
+.widget-filter__date--to {
+    margin-bottom: 0;
+}
+
+.widget-filter__date-title,
+.widget-filter__price-title {
+    margin-bottom: 11px;
+    font-weight: 400;
+    font-size: 30px;
+    color: #fff;
+}
+
+.widget-filter__date-input {
+    width: 100%;
+    height: 43px;
+    padding-left: 8px;
+    border-radius: 3px;
+    border: none;
+    background-image: url(../../assets/widget/form-data.png);
+    background-repeat: no-repeat;
+    background-position: 95%;
+    background-size: 8%;
+}
+
+.widget-filter__options {
+    padding-left: 68px;
+    margin-top: 25px;
+}
+
+.widget-filter__price {
+    padding: 37px 28px;
+}
+
+.widget-filter__range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+}
+
+.widget-filter__last-tickets {
+    padding: 30px 0;
+    background-color: #E5E5E5;
+}
+
+.widget-filter__last-tickets-title {
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.widget-filter__checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    cursor: pointer;
+}
+
+.widget-filter__checkbox:last-child {
+    margin-bottom: 20px;
+}
+
+.widget-filter__checkbox-element {
+    position: relative;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.widget-filter__checkbox-input {
+    position: absolute;
+    clip: rect(0 0 0 0);
+}
+
+.widget-filter__checkbox-element--active::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -10px;
+    width: 28px;
+    height: 28px;
+    background-color: #FFA800;
+    border-radius: 50%;
+    transition: left 400ms ease-in-out;
+}
+
+.widget-filter__checkbox-element--active::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -55px;
+    width: 72px;
+    height: 20px;
+    background-color: #FCDC9D;
+    border-radius: 15px;
+    transition: background-color 400ms ease;
+}
+
+.widget-filter__checkbox-element--inactive::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -56px;
+    width: 28px;
+    height: 28px;
+    background-color: #C4C4C4;
+    border-radius: 50%;
+    transition: left 400ms ease-in-out;
+}
+
+.widget-filter__checkbox-element--inactive::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -55px;
+    width: 72px;
+    height: 20px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    transition: background-color 400ms ease;
+}
+
+.widget-filter__checkbox-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 34px;
+}
+
+.widget-filter__checkbox-label {
+    margin-right: auto;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+}
+
+.widget-filter__range-slider {
+    touch-action: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    width: 295px;
+    height: 20px;
+    background: transparent;
+    border-radius: 8px;
+    border: 1px solid #C4C4C4;
+}
+
+.widget-filter__range-slider input[type="range"] {
+    appearance: none;
+    display: none;
+    pointer-events: none;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+}
+
+.widget-filter__range-thumb {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #FFFFFF;
+}
+
+.widget-filter__range-track {
+    position: absolute;
+    z-index: 1;
+    transform: translate(0, -50%);
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    background: #FFA800;
+}
+
+.widget-filter__range-values {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: right;
+}
+
+.widget-filter__range-value {
+    font-weight: 400;
+    font-size: 16px;
+    color: #e5e5e5;
+}
+
+.widget-filter__range-value--start {
+    padding-right: 2px;
+}
+
+.widget-filter__range-value--end {
+    padding-left: 2px;
+}

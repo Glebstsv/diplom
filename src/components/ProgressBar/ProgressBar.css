@@ -1,0 +1,85 @@
+.progress {
+    display: flex;
+    position: sticky;
+    height: 100px;
+    width: 100%;
+    background: #3e3c41;
+}
+
+.progress--trains {
+    background: #3e3c41;
+}
+
+.progress--current {
+    background-color: #ffa800;
+}
+
+.progress__edge {
+    height: 100%;
+    width: 13.1%;
+}
+
+.progress__step {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 324px;
+}
+
+.progress__step--with-margin {
+    margin-left: 37px;
+}
+
+.progress__number {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    margin: auto 20px auto 40px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+.progress__digit {
+    position: absolute;
+    left: 15px;
+    top: 4px;
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.progress__text {
+    color: #fff;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.progress__arrow {
+    position: absolute;
+    left: 290px;
+    z-index: 1;
+}
+
+.progress__arrow-part {
+    height: 50px;
+    width: 50px;
+    border-right: 2px solid #fff;
+}
+
+.progress__arrow-part--top {
+    transform: skewX(35deg);
+}
+
+.progress__arrow-part--bottom {
+    transform: skewX(-35deg);
+}
+
+.progress__arrow-out {
+    width: 40px;
+    height: 100px;
+    position: absolute;
+    left: -40px;
+}
