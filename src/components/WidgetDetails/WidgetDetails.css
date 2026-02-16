@@ -1,0 +1,245 @@
+.widget {
+    width: 360px;
+    height: 100%;
+    background: #3e3c41;
+}
+
+.widget__title {
+    padding: 35px 0 30px 43px;
+    border-bottom: 1px solid #e5e5e5;
+    font-weight: 500;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #e5e5e5;
+}
+
+.widget__route-header {
+    padding: 22px 28px 0 28px;
+    margin-bottom: 49px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.widget__icon {
+    width: 32px;
+    height: 26px;
+    margin-right: 12px;
+    background-image: url(../../assets/widget/subtract.png)
+}
+
+.widget__icon--back {
+    background-image: url(../../assets/widget/subtract-back.png)
+}
+
+.widget__icon--passenger {
+    width: 26px;
+    height: 26px;
+    margin-right: 17px;
+    background-image: url(../../assets/widget/pass.png)
+}
+
+.widget__header-title {
+    font-weight: 700;
+    font-size: 30px;
+    color: #fff;
+}
+
+.widget__date {
+    margin-left: auto;
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+}
+
+.widget__toggle {
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    background-image: url(../../assets/widget/hide.png)
+}
+
+.widget__toggle--show {
+    background-image: url(../../assets/widget/show.png)
+}
+
+
+
+.widget__route-content {
+    padding-left: 28px;
+    padding-right: 27px;
+    margin-bottom: 71px;
+}
+
+.widget__train-info {
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.widget__train-label {
+    font-weight: 400;
+    font-size: 18px;
+    color: #e5e5e5;
+}
+
+.widget__train-number {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: right;
+    color: #fff;
+}
+
+.widget__city-name {
+    max-width: 130px;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: right;
+    color: #fff;
+}
+
+.widget__route-time {
+    padding: 0 28px 64px 28px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.widget__time-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.widget__duration {
+    position: absolute;
+    top: -25px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #e5e5e5;
+}
+
+.widget__direction-arrow {
+    width: 30px;
+    height: 20px;
+    background-image: url(../../assets/widget/arrow.png)
+}
+
+.widget__direction-arrow--back {
+    background-image: url(../../assets/widget/arrow-back.png)
+}
+
+.widget__time {
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+}
+
+.widget__date-info {
+    margin-bottom: 17px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #928f94;
+}
+
+.widget__station-city {
+    font-weight: 400;
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.widget__station-name {
+    max-width: 115px;
+    font-size: 16px;
+    color: #928f94;
+}
+
+.widget__passengers {
+    padding: 20px 27px 0 29px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.widget__passenger-header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-bottom: 27px;
+}
+
+.widget__passenger-info {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.widget__passenger-info:last-child {
+    margin-bottom: 46px;
+}
+
+.widget__passenger-count {
+    font-weight: 400;
+    font-size: 18px;
+    color: #e5e5e5;
+}
+
+.widget__price {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.widget__price-value {
+    font-weight: 700;
+    font-size: 24px;
+    text-align: right;
+    color: #fff;
+}
+
+.widget__currency {
+    width: 14px;
+    height: 17px;
+    margin-left: 7px;
+    background-image: url(../../assets/widget/currency-pass.png)
+}
+
+.widget__total {
+    padding: 30px 27px 33px 28px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.widget__total-title {
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.widget__total-price {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.widget__total-value {
+    margin-right: 11px;
+    font-weight: 700;
+    font-size: 48px;
+    color: #ffa800;
+}
+
+.widget__total-currency {
+    width: 26px;
+    height: 32px;
+    background-image: url(../../assets/widget/currency.png);
+    background-repeat: no-repeat; 
+}

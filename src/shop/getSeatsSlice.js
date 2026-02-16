@@ -63,7 +63,15 @@ const getSeatsSlice = createSlice({
     }
 })
 
-export const selectSelectedSeat = (state) => state.seats.selectedSeat;
+export const selectSelectedSeat = (state) => {
+    if (!state?.trainSeat?.selectedSeat) {
+        return {
+            departure: [],
+            arrival: []
+        };
+    }
+    return state.trainSeat.selectedSeat;
+};
 
 export const { addAmountPassanger, addSeat, removeSelectedSeat } = getSeatsSlice.actions
 export default getSeatsSlice.reducer

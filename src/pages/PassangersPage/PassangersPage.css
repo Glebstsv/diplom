@@ -1,0 +1,107 @@
+.passengers {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.passengers__main {
+    padding: 96px 256px 0 259px;
+    display: flex;
+    flex-direction: row;
+    background-color: #E5E5E5;
+    flex: 1 0 auto;
+}
+
+.passengers__section {
+    width: 960px;
+    margin-left: 83px;
+}
+
+.passengers__add {
+    margin-bottom: 103px;
+}
+
+.passengers__add-button {
+    position: relative;
+    width: 960px;
+    height: 97px;
+    padding-left: 26px;
+    border: 1px solid #c4c4c4;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+    background: #fff;
+    text-align: left;
+    font-weight: 400;
+    font-size: 30px;
+    color: #292929;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.passengers__add-button::before {
+    content: '';
+    position: absolute;
+    left: 904px;
+    bottom: 40px;
+    width: 19px;
+    height: 19px;
+    background-image: url(../../assets/passangers/add-pass-plus.png);
+}
+
+.passengers__add-button:hover {
+    background-color: #f7f5f5;
+}
+
+.passengers__next {
+    margin-bottom: 140px;
+    margin-left: 738px;
+}
+
+.passengers__next-button {
+    width: 222px;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    background: #928f94;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.passengers__next-button:focus {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.passengers__next-button--active {
+    cursor: pointer;
+    background: #ffa800;
+}
+
+.passengers__next-button--active:hover {
+    background: #ffb93d;
+}
+
+.passengers__validate {
+    padding: 37px 0 37px 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: rgba(255, 61, 0, 0.38);
+}
+
+.passengers__validate--success {
+    background: #b2f6a1;
+}
+
+.passengers__validate-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+    background-image: url(../../assets/passangers/Subtract.png);
+}
+
+.passengers__validate-icon--success {
+    background-image: url(../../assets/passangers/Subtract-succsses.png);
+}
