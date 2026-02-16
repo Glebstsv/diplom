@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import Banner from "../../components/Banner/Banner";
 import Header from "../../components/Header/Header";
@@ -8,7 +8,7 @@ import SearchForm from "../../components/SearchForm/SearchForm";
 import SeatSelection from "../../components/SeatSelection/SeatSelection";
 import Footer from "../../components/Footer/Footer";
 import WidgetFilter from "../../components/WidgetFilter/WidgetFilter";
-import { setSeats } from "../../shop/getTrainSeatSlice";
+import { setSeats, selectSeats } from "../../shop/getTrainSeatSlice";
 import "./SeatSelectionPage.css";
 import bannerImg from "../../assets/banners/banner2.png";
 
@@ -16,14 +16,14 @@ const SeatSelectionPage = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
-  const [seatsLoaded, setSeatsLoaded] = useState(false);
+  
+  const seats = useSelector(selectSeats);
+  const train = useSelector(state => state.trainSeat?.train);
   
   const loadedRef = useRef({
     departure: false,
     arrival: false
   });
-  
-  const train = JSON.parse(localStorage.getItem("train"));
 
   useEffect(() => {
     const loadAllSeats = async () => {
@@ -34,8 +34,7 @@ const SeatSelectionPage = () => {
 
       setLoading(true);
       
-      // Загружаем места для отправления
-      if (!loadedRef.current.departure && train.departure?._id) {
+      if (!loadedRef.current.departure && train.departure?._id && !seats.departure.length) {
         try {
           const response = await fetch(`https://students.netoservices.ru/fe-diplom/routes/${train.departure._id}/seats`);
           const data = await response.json();
@@ -46,8 +45,7 @@ const SeatSelectionPage = () => {
         }
       }
       
-      // Загружаем места для прибытия (если есть)
-      if (train.arrival && !loadedRef.current.arrival && train.arrival?._id) {
+      if (train.arrival && !loadedRef.current.arrival && train.arrival?._id && !seats.arrival.length) {
         try {
           const response = await fetch(`https://students.netoservices.ru/fe-diplom/routes/${train.arrival._id}/seats`);
           const data = await response.json();
@@ -59,11 +57,10 @@ const SeatSelectionPage = () => {
       }
       
       setLoading(false);
-      setSeatsLoaded(true);
     };
 
     loadAllSeats();
-  }, [train, dispatch]); // Зависимости остаются
+  }, [train, dispatch, seats.departure.length, seats.arrival.length]);
 
   const handleNextClick = () => {
     navigate("/passangers");
@@ -127,7 +124,7 @@ const SeatSelectionPage = () => {
           <button 
             className="seat-selection__button" 
             onClick={handleNextClick}
-            disabled={!seatsLoaded}
+            disabled={loading}
           >
             Далее
           </button>

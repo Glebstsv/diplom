@@ -5,17 +5,54 @@ export const getTrains = createAsyncThunk(
   'trains/getTrains',
   async ({ choice, filters }) => {
     const { fromCity, toCity, fromDate, toDate } = choice;
-    const queryParams = new URLSearchParams({
+    
+    if (!fromCity?._id || !toCity?._id) {
+      throw new Error('Не выбраны города отправления и назначения');
+    }
+
+    const params = {
       from_city_id: fromCity._id,
       to_city_id: toCity._id,
       date_start: fromDate,
-      date_end: toDate,
-      ...filters
-    });
+    };
 
-    const response = await axios(
-      `https://students.netoservices.ru/fe-diplom/routes?${queryParams.toString()}`
+    if (toDate) {
+      params.date_end = toDate;
+    }
+
+    if (filters.have_first_class) params.have_first_class = true;
+    if (filters.have_second_class) params.have_second_class = true;
+    if (filters.have_third_class) params.have_third_class = true;
+    if (filters.have_fourth_class) params.have_fourth_class = true;
+    
+    if (filters.have_wifi) params.have_wifi = true;
+    if (filters.have_express) params.have_express = true;
+    
+    if (filters.price_from !== undefined && filters.price_from !== 0) {
+      params.price_from = filters.price_from;
+    }
+    if (filters.price_to !== undefined && filters.price_to !== 10000) {
+      params.price_to = filters.price_to;
+    }
+    
+    if (filters.start_departure_hour_from !== 0) {
+      params.start_departure_hour_from = filters.start_departure_hour_from;
+    }
+    if (filters.start_departure_hour_to !== 24) {
+      params.start_departure_hour_to = filters.start_departure_hour_to;
+    }
+    if (filters.start_arrival_hour_from !== 0) {
+      params.start_arrival_hour_from = filters.start_arrival_hour_from;
+    }
+    if (filters.start_arrival_hour_to !== 24) {
+      params.start_arrival_hour_to = filters.start_arrival_hour_to;
+    }
+
+    const response = await axios.get(
+      `https://students.netoservices.ru/fe-diplom/routes`,
+      { params }
     );
+    
     return response.data;
   }
 );
@@ -44,20 +81,20 @@ export const getTrainsSlice = createSlice({
     }
   },
   extraReducers: (builder) => {
-    builder.addCase(getTrains.pending, (state) => {
-      state.loading = true;
-    });
-
-    builder.addCase(getTrains.fulfilled, (state, { payload }) => {
-      state.loading = false;
-      state.items = payload.items;
-      localStorage.setItem('trains', JSON.stringify(payload.items));
-    });
-
-    builder.addCase(getTrains.rejected, (state, { error }) => {
-      state.loading = false;
-      state.error = error;
-    });
+    builder
+      .addCase(getTrains.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(getTrains.fulfilled, (state, { payload }) => {
+        state.loading = false;
+        state.items = payload.items || [];
+        localStorage.setItem('trains', JSON.stringify(payload.items || []));
+      })
+      .addCase(getTrains.rejected, (state, { error, payload }) => {
+        state.loading = false;
+        state.error = payload || error.message;
+      });
   }
 });
 

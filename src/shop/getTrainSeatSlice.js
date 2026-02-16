@@ -70,6 +70,11 @@ const getTrainSeatSlice = createSlice({
     }    
 })
 
+export const selectTrain = (state) => state.trainSeat?.train || [];
+export const selectSeats = (state) => state.trainSeat?.seat || { departure: [], arrival: [] };
+export const selectSelectedSeats = (state) => state.trainSeat?.selectedSeat || { departure: [], arrival: [] };
+export const selectTrainLoading = (state) => state.trainSeat?.loading || false;
+
 export default getTrainSeatSlice.reducer
 
 export const { 
