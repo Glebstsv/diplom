@@ -40,6 +40,17 @@ const getTrainSeatSlice = createSlice({
         getCarriageType: (state, { payload }) => {
             state.type = payload
         },
+        setSeats: (state, { payload }) => {
+            const { data, direction } = payload;
+            state.seat[direction] = data;
+        },
+        addSelectedSeat: (state, { payload }) => {
+            const { seat, direction } = payload;
+            if (!state.selectedSeat[direction]) {
+                state.selectedSeat[direction] = [];
+            }
+            state.selectedSeat[direction] = seat;
+        }
     },
     extraReducers: (builder) => {
         builder.addCase(getSeat.pending, (state) => {
@@ -61,4 +72,10 @@ const getTrainSeatSlice = createSlice({
 
 export default getTrainSeatSlice.reducer
 
-export const { getTrain, getSelectedSeat, getCarriageType, getDirection } = getTrainSeatSlice.actions
+export const { 
+    getTrain, 
+    getSelectedSeat, 
+    getCarriageType, 
+    setSeats, 
+    addSelectedSeat 
+} = getTrainSeatSlice.actions

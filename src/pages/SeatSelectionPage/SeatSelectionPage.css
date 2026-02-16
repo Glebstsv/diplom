@@ -1,0 +1,52 @@
+.seat-selection {
+    padding: 96px 256px 0 259px;
+    display: flex;
+    flex-direction: row;
+    background-color: #E5E5E5;
+}
+
+.seat-selection__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-left: 92px;
+}
+
+.seat-selection__title {
+    width: 100%;
+    margin-bottom: 48px;
+    font-weight: 500;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #292929;
+}
+
+.seat-selection__seat:last-child {
+    margin-bottom: 0;
+}
+
+.seat-selection__button {
+    width: 222px;
+    height: 60px;
+    margin-top: 102px;
+    margin-bottom: 122px;
+    border-radius: 5px;
+    border: none;
+    background: #ffa800;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+.seat-selection__button:focus {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.seat-selection__button:active {
+    background: transparent;
+    border: 1px solid #ffa800;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    color: #ffa800;
+}
