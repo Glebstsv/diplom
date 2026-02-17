@@ -5,6 +5,7 @@ import TrainSelectionPage from "./pages/TrainSelectionPage/TrainSelectionPage";
 import SeatSelectionPage from "./pages/SeatSelectionPage/SeatSelectionPage";
 import PassangersPage from "./pages/PassangersPage/PassangersPage";
 import PaymentPage from "./pages/PaymentPage/PaymentPage";
+import ValidatePage from "./pages/ValidatePage/ValidatePage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/seat" element={<SeatSelectionPage />} />
         <Route path="/passangers" element={<PassangersPage />} />
         <Route path="/payment" element={<PaymentPage />} />
+        <Route path="/validate" element={<ValidatePage />} />
       </Routes>
     </BrowserRouter>
   );

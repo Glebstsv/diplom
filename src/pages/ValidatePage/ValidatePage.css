@@ -1,0 +1,72 @@
+.validate {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 47px;
+}
+
+.validate__main {
+    padding: 96px 256px 0 259px;
+    display: flex;
+    flex-direction: row;
+    background-color: #E5E5E5;
+    flex: 1 0 auto;
+}
+
+.validate__section {
+    width: 960px;
+    margin-left: 83px;
+}
+
+.validate__forms {
+    width: 100%;
+    margin-bottom: 46px;
+}
+
+.validate__form-header {
+    padding: 33px 0 30px 30px;
+    background: #fff;
+    border: 1px solid #c4c4c4;
+    border-bottom: none;
+}
+
+.validate__title {
+    font-weight: 400;
+    font-size: 30px;
+    color: #292929;
+    margin: 0;
+}
+
+.validate__confirm {
+    margin-left: 637px;
+    margin-bottom: 181px;
+}
+
+.validate__confirm-button {
+    width: 323px;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    background: #ffa800;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.validate__confirm-button:hover {
+    background: #ffb93d;
+}
+
+.validate__confirm-button:focus {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.validate__confirm-button:active {
+    border: 1px solid #ffa800;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: transparent;
+    color: #ffa800;
+}

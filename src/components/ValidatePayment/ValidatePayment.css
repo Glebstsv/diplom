@@ -1,0 +1,72 @@
+.validate {
+    background: #fff;
+    border: 1px solid #c4c4c4;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+    margin-bottom: 123px;
+}
+
+.validate__header {
+    padding: 30px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.validate__title {
+    margin: 0;
+    font-weight: 400;
+    font-size: 30px;
+    color: #292929;
+}
+
+.validate__content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.validate__payment-info {
+    width: 71%;
+    padding: 44px 33px;
+    border-right: 1px dashed #e5e5e5;
+}
+
+.validate__payment-method {
+    margin: 0;
+    font-weight: 400;
+    font-size: 24px;
+    color: #292929;
+}
+
+.validate__actions {
+    width: 29%;
+    padding: 30px 10px;
+}
+
+.validate__change-button {
+    width: 233px;
+    height: 39px;
+    border: 1px solid #292929;
+    background-color: transparent;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: #292929;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.validate__change-button:hover {
+    border-color: #ffa800;
+    color: #ffa800;
+}
+
+.validate__change-button:focus {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    color: #ffa800;
+}
+
+.validate__change-button:active {
+    color: #292929;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: #ffa800;
+}

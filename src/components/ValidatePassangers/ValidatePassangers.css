@@ -1,0 +1,161 @@
+.validate {
+    background: #fff;
+    border: 1px solid #c4c4c4;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+.validate__header {
+    padding: 30px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.validate__title {
+    margin: 0;
+    font-weight: 400;
+    font-size: 30px;
+    color: #292929;
+}
+
+.validate__content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.validate__empty {
+    width: 71%;
+    padding: 30px;
+    text-align: center;
+    color: #928f94;
+    font-size: 18px;
+    border-right: 1px dashed #e5e5e5;
+}
+
+.validate__passengers {
+    width: 71%;
+    border-right: 1px dashed #e5e5e5;
+}
+
+.validate__summary {
+    width: 29%;
+    padding: 30px 25px;
+}
+
+.validate__total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 29px;
+    margin-right: 53px;
+}
+
+.validate__total-label {
+    font-weight: 400;
+    font-size: 30px;
+    color: #292929;
+    margin: 0;
+}
+
+.validate__total-sum {
+    position: relative;
+    font-weight: 700;
+    font-size: 30px;
+    color: #292929;
+    margin: 0;
+}
+
+.validate__total-sum::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: -25px;
+    width: 20px;
+    height: 24px;
+    background-image: url(../../assets/validate/currency.png)
+}
+
+.validate__change-button {
+    width: 233px;
+    height: 39px;
+    border: 1px solid #292929;
+    background-color: transparent;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    color: #292929;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.validate__change-button:hover {
+    border-color: #ffa800;
+    color: #ffa800;
+}
+
+.validate__change-button:focus {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    color: #ffa800;
+}
+
+.validate__change-button:active {
+    color: #292929;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: #ffa800;
+}
+
+.passenger-card {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px dashed #e5e5e5;
+}
+
+.passenger-card:last-child {
+    border-bottom: none;
+}
+
+.passenger-card__type {
+    margin-right: 32px;
+}
+
+.passenger-card__icon {
+    width: 68px;
+    height: 68px;
+    margin-bottom: 17px;
+    background-image: url(../../assets/validate/validate-pass.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.passenger-card__age {
+    margin: 0;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #292929;
+}
+
+.passenger-card__info {
+    flex: 1;
+}
+
+.passenger-card__name {
+    margin: 0 0 13px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #292929;
+}
+
+.passenger-card__detail {
+    margin: 0 0 5px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #928f94;
+}
+
+.passenger-card__detail:last-child {
+    margin-bottom: 0;
+}
