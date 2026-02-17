@@ -4,7 +4,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import TrainSelectionPage from "./pages/TrainSelectionPage/TrainSelectionPage";
 import SeatSelectionPage from "./pages/SeatSelectionPage/SeatSelectionPage";
 import PassangersPage from "./pages/PassangersPage/PassangersPage";
-
+import PaymentPage from "./pages/PaymentPage/PaymentPage";
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
         <Route path="/trains" element={<TrainSelectionPage />} />
         <Route path="/seat" element={<SeatSelectionPage />} />
         <Route path="/passangers" element={<PassangersPage />} />
+        <Route path="/payment" element={<PaymentPage />} />
       </Routes>
     </BrowserRouter>
   );

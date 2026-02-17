@@ -1,0 +1,194 @@
+.personal {
+    margin-bottom: 116px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+    background: #fff;
+}
+
+.personal__header {
+    padding: 35px 0 36px 35px;
+    background: #f9f9f9;
+    border-bottom: 1px dashed #928f94;
+}
+
+.personal__title {
+    font-weight: 400;
+    font-size: 30px;
+    color: #292929;
+}
+
+.personal__main {
+    padding-top: 30px;
+    padding-left: 35px;
+    border-bottom: 1px dashed #928f94;
+}
+
+.personal__info {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 54px;
+}
+
+.personal__field {
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #292929;
+    text-transform: capitalize;
+}
+
+.personal__input {
+    width: 280px;
+    height: 50px;
+    padding-left: 15px;
+    border: 1px solid #928f94;
+    border-radius: 5px;
+    background: #fff;
+    font-weight: 400;
+    font-size: 24px;
+    color: #292929;
+}
+
+.personal__input--margin-right {
+    margin-right: 25px;
+}
+
+.personal__phone {
+    margin-bottom: 38px;
+}
+
+.personal__email {
+    margin-bottom: 89px;
+}
+
+.personal__input--contact {
+    width: 360px;
+    height: 50px;
+    padding-left: 15px;
+    border: 1px solid #928f94;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 24px;
+    color: #c4c4c4;
+}
+
+.personal__footer {
+    padding-bottom: 82px;
+}
+
+.personal__payment {
+    padding-top: 50px;
+}
+
+.personal__payment-header {
+    padding: 33px 0 37px 35px;
+    background: #f9f9f9;
+    border-bottom: 1px dashed #928f94;
+}
+
+.personal__payment-title {
+    font-weight: 400;
+    font-size: 30px;
+    color: #292929;
+}
+
+.personal__payment-method {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 58px;
+    padding-left: 35px;
+    border-bottom: 1px dashed #928f94;
+}
+
+.personal__payment-method--cash {
+    border-bottom: none;
+}
+
+.personal__checkbox-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    margin-left: 55px;
+}
+
+.personal__payment-options {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 71px;
+}
+
+.personal__checkbox {
+    width: 28px;
+    height: 28px;
+    margin-right: 20px;
+    border: 1px solid #928f94;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.personal__checkbox:checked,
+.personal__checkbox:not(:checked) {
+    display: none;
+}
+
+.personal__checkbox:checked + label,
+.personal__checkbox:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.personal__checkbox:checked + label:before,
+.personal__checkbox:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: -53px;
+    top: -2px;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #928f94;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.personal__checkbox:checked + label:before {
+    border: 1px solid #FFA800;
+}
+
+.personal__checkbox:checked + label:after,
+.personal__checkbox:not(:checked) + label:after {
+    content: "";
+    position: absolute;
+    left: -48px;
+    top: 6px;
+    width: 23px;
+    height: 18px;
+    background-image: url(../../assets/payment/check.png);
+}
+
+.personal__checkbox:not(:checked) + label:after {
+    opacity: 0;
+}
+
+.personal__checkbox:checked + label:after {
+    opacity: 1;
+}
+
+.personal__checkbox:checked + .personal__checkbox-text {
+    color: #FFA800;
+}
+
+.personal__checkbox-text {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.personal__payment-variant {
+    margin-right: 110px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #292929;
+}
+
+.personal__payment-variant--card {
+    max-width: 135px;
+}
