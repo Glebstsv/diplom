@@ -6,6 +6,7 @@ import SeatSelectionPage from "./pages/SeatSelectionPage/SeatSelectionPage";
 import PassangersPage from "./pages/PassangersPage/PassangersPage";
 import PaymentPage from "./pages/PaymentPage/PaymentPage";
 import ValidatePage from "./pages/ValidatePage/ValidatePage";
+import SuccessOrderPage from "./pages/SuccessOrderPage/SuccessOrderPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/passangers" element={<PassangersPage />} />
         <Route path="/payment" element={<PaymentPage />} />
         <Route path="/validate" element={<ValidatePage />} />
+        <Route path="/success" element={<SuccessOrderPage />} />
       </Routes>
     </BrowserRouter>
   );
