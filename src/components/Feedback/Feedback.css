@@ -33,7 +33,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     flex-shrink: 0;
+    gap: 28px;
 }
 
 .feedback__item {
@@ -43,14 +45,12 @@
 
 .feedback__item--first {
     width: 700px;
-    margin-right: 28px;
 }
 
 .feedback__item--last {
     margin-top: -7px;
 }
 
-/* Review styles */
 .review__title {
     margin: 24px 0 21px -6px;
     font-size: 24px;
@@ -119,7 +119,6 @@
     margin-left: 18px;
 }
 
-/* Pagination styles */
 .feedback__pagination {
     padding-bottom: 118px;
     margin: -5px 0 0 19px;

@@ -1,6 +1,8 @@
 .how-it-works {
     position: relative;
-    background-image: url(../../assets/hiw/hiw-background.png)
+    background-image: url(../../assets/hiw/hiw-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .how-it-works__container {
@@ -46,7 +48,9 @@
 .how-it-works__list {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 137px;
+    width: 100%;
 }
 
 .how-it-works__item {
@@ -57,7 +61,7 @@
 }
 
 .how-it-works__item:first-child {
-    margin-left: 229px;
+    margin-left: 0;
 }
 
 .how-it-works__item-image {

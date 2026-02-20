@@ -2,7 +2,6 @@
     position: absolute;
     z-index: 999;
     width: 100%;
-    max-width: 1920px;
 }
 
 .header__nav {
@@ -22,11 +21,11 @@
 .header__nav-container {
     padding-left: 258px;
     background-color: #292929;
+    width: 100%;
 }
 
 .header__nav-list {
     display: flex;
-
     padding: 25px 0 33px 0;
 }
 
