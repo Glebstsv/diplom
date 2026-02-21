@@ -1,40 +1,45 @@
 import CarriageType from "./CarriageType";
+import "./SeatCarriageType.css";
 
-const SeatCarriageType = ({ seat, onClick }) => {
+const SeatCarriageType = ({ seat, onSelect, selectedType }) => {
   return (
     <div className="seat-carriage-type">
       <h3 className="carriage-type-title">Тип вагона</h3>
       <div className="carriage-types">
         {seat?.first && (
           <CarriageType
-            link={"lux"}
-            name={"Люкс"}
-            onClick={onClick}
-            id={"first"}
+            link="lux"
+            name="Люкс"
+            onSelect={onSelect}
+            id="first"
+            isActive={selectedType === 'first'}
           />
         )}
         {seat?.second && (
           <CarriageType
-            link={"coupe"}
-            name={"Купе"}
-            onClick={onClick}
-            id={"second"}
+            link="coupe"
+            name="Купе"
+            onSelect={onSelect}
+            id="second"
+            isActive={selectedType === 'second'}
           />
         )}
         {seat?.third && (
           <CarriageType
-            link={"res"}
-            name={"Плацкарт"}
-            onClick={onClick}
-            id={"third"}
+            link="reserved"
+            name="Плацкарт"
+            onSelect={onSelect}
+            id="third"
+            isActive={selectedType === 'third'}
           />
         )}
         {seat?.fourth && (
           <CarriageType
-            link={"sed"}
-            name={"Сидячий"}
-            onClick={onClick}
-            id={"fourth"}
+            link="seat"
+            name="Сидячий"
+            onSelect={onSelect}
+            id="fourth"
+            isActive={selectedType === 'fourth'}
           />
         )}
       </div>

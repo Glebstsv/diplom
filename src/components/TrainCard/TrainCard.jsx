@@ -3,7 +3,7 @@ import CardSeat from "../TrainCard/components/CardSeat";
 import CardTitle from "../TrainCard/components/CardTitle";
 import "./TrainCard.css";
 import { useDispatch } from "react-redux";
-import { getTrain } from "../../shop/getTrainSeatSlice";
+import { setTrain } from "../../shop/getTrainSeatSlice";
 import { useNavigate } from "react-router-dom";
 
 const TrainCard = ({ card, order }) => {
@@ -11,7 +11,7 @@ const TrainCard = ({ card, order }) => {
   const navigate = useNavigate();
 
   const onClick = () => {
-    dispatch(getTrain(card));
+    dispatch(setTrain(card));
     navigate("/seat");
   };
 

@@ -1,86 +1,74 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const getSeat = createAsyncThunk(
-    'seat/getSeat',
-    async({ id, direction }) => {
-        const response = await axios(`https://students.netoservices.ru/fe-diplom/routes/${id}/seats`)
-        const data = response.data;
-        return { data, direction };
+  'trainSeat/getSeat',
+  async ({ id, direction }) => {
+    const response = await axios.get(`https://students.netoservices.ru/fe-diplom/routes/${id}/seats`);
+    return { data: response.data, direction };
+  }
+);
+
+// Добавьте этот экспорт, если он нужен
+export const getTrain = createAsyncThunk(
+  'trainSeat/getTrain',
+  async (id) => {
+    const response = await axios.get(`https://students.netoservices.ru/fe-diplom/routes/${id}`);
+    return response.data;
+  }
+);
+
+const trainSeatSlice = createSlice({
+  name: 'trainSeat',
+  initialState: {
+    seat: {
+      departure: [],
+      arrival: []
+    },
+    selectedClassType: null,
+    train: null,
+    loading: false,
+    error: null
+  },
+  reducers: {
+    setSeats: (state, { payload }) => {
+      const { data, direction } = payload;
+      state.seat[direction] = data;
+    },
+    setSelectedClassType: (state, { payload }) => {
+      state.selectedClassType = payload;
+    },
+    setTrain: (state, { payload }) => {
+      state.train = payload;
     }
-)
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(getSeat.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(getSeat.fulfilled, (state, { payload }) => {
+        state.loading = false;
+        state.seat[payload.direction] = payload.data;
+      })
+      .addCase(getSeat.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
+      })
+      .addCase(getTrain.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(getTrain.fulfilled, (state, { payload }) => {
+        state.loading = false;
+        state.train = payload;
+      })
+      .addCase(getTrain.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
+      });
+  }
+});
 
-const data = localStorage.getItem('seats');
-
-const getTrainSeatSlice = createSlice({
-    name: 'getTrainSeat',
-    initialState: {
-        train: data ? JSON.parse(data) : [],
-        loading: false,
-        error: null,
-        seat: {
-            departure: [],
-            arrival: []
-        },
-        selectedSeat: {
-            departure: [],
-            arrival: []
-        },
-        type: []
-    },
-    reducers: {
-        getTrain: (state, { payload }) => {
-            state.train = payload;
-            localStorage.setItem('train', JSON.stringify(payload))
-        },
-        getSelectedSeat: (state, { payload }) => {
-            const { el, direction } = payload
-            state.selectedSeat[direction] = el;
-        },
-        getCarriageType: (state, { payload }) => {
-            state.type = payload
-        },
-        setSeats: (state, { payload }) => {
-            const { data, direction } = payload;
-            state.seat[direction] = data;
-        },
-        addSelectedSeat: (state, { payload }) => {
-            const { seat, direction } = payload;
-            if (!state.selectedSeat[direction]) {
-                state.selectedSeat[direction] = [];
-            }
-            state.selectedSeat[direction] = seat;
-        }
-    },
-    extraReducers: (builder) => {
-        builder.addCase(getSeat.pending, (state) => {
-            state.loading =  true;
-        });
-
-        builder.addCase(getSeat.fulfilled, (state, { payload } ) => {
-            const { data, direction } = payload;
-            state.loading = false;
-            state.seat[direction] = data;
-        });
-        
-        builder.addCase(getSeat.rejected, (state, { error }) => {
-            state.loading = false;
-            state.error = error
-        })
-    }    
-})
-
-export const selectTrain = (state) => state.trainSeat?.train || [];
+export const { setSeats, setSelectedClassType, setTrain } = trainSeatSlice.actions;
 export const selectSeats = (state) => state.trainSeat?.seat || { departure: [], arrival: [] };
-export const selectSelectedSeats = (state) => state.trainSeat?.selectedSeat || { departure: [], arrival: [] };
-export const selectTrainLoading = (state) => state.trainSeat?.loading || false;
-
-export default getTrainSeatSlice.reducer
-
-export const { 
-    getTrain, 
-    getSelectedSeat, 
-    getCarriageType, 
-    setSeats, 
-    addSelectedSeat 
-} = getTrainSeatSlice.actions
+export default trainSeatSlice.reducer;

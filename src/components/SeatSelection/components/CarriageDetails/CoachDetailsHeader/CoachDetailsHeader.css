@@ -1,0 +1,53 @@
+.selection-seats-coach-details-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 6px;
+  padding: 4px 18px 4px 32px;
+  background: rgba(255, 168, 0, 0.44);
+  margin-bottom: 0;
+}
+
+.selection-seats-coach-details-header__title {
+  font-size: 18px;
+  line-height: 1.16667;
+  font-weight: 400;
+  color: #333;
+  margin: 0;
+}
+
+.selection-seats-coach-details-header__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 6px;
+  margin: 0;
+}
+
+.selection-seats-coach-details-header__item {
+  font-size: 24px;
+  line-height: 1.16667;
+  font-weight: 700;
+  color: #333;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.selection-seats-coach-details-header__item:hover {
+  opacity: 0.75;
+}
+
+.selection-seats-coach-details-header__item[data-active="true"] {
+  color: white;
+}
+
+.selection-seats-coach-details-header__description {
+  margin-left: auto;
+  font-size: 16px;
+  line-height: 1.171875;
+  font-weight: 400;
+  color: #333;
+}

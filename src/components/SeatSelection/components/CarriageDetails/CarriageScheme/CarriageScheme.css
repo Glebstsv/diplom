@@ -1,0 +1,215 @@
+.selection-seats-coach-details-scheme {
+  position: relative;
+  padding: 90px 14px 0 20px;
+  margin-top: 0;
+  border: none;
+  background: transparent;
+}
+
+.selection-seats-coach-details-scheme__number {
+  position: absolute;
+  top: 68px;
+  left: 76px;
+  min-width: 36px;
+  padding: 4px 8px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  color: white;
+  background: #2D2B2F;
+  transform: translateX(-50%);
+  margin: 0;
+  z-index: 1;
+}
+
+.selection-seats-coach-details-scheme__container {
+  display: flex;
+  height: 124px;
+  position: relative;
+  overflow: visible;
+}
+
+.selection-seats-coach-details-scheme__container::before {
+  content: '';
+  display: block;
+  width: 130px;
+  height: 100%;
+  background: right no-repeat;
+  background-size: contain;
+  background-image: url('../../../../../assets/seat-select/wagon-scheme-before.png');
+}
+
+.selection-seats-coach-details-scheme__container::after {
+  content: '';
+  display: block;
+  width: 72px;
+  height: 100%;
+  background: left no-repeat;
+  background-size: contain;
+  background-image: url('../../../../../assets/seat-select/wagon-scheme-after.png');
+}
+
+.selection-seats-coach-details-scheme__seats {
+  width: 722px;
+  padding: 2px 0;
+}
+
+.scheme-seats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.scheme-seats__side {
+  display: flex;
+  border-color: #928F94;
+  position: relative;
+}
+
+.scheme-seats__side::before,
+.scheme-seats__side::after {
+  content: '';
+  background-color: #928F94;
+}
+
+.scheme-seats__side--right {
+  border-top-width: 5px;
+  border-top-style: solid;
+  height: 66px;
+}
+
+.scheme-seats__side--left {
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
+  height: 30px;
+}
+
+.scheme-seats--first .scheme-seats__side::before,
+.scheme-seats--second .scheme-seats__side::before,
+.scheme-seats--third .scheme-seats__side::before,
+.scheme-seats--first .scheme-seats__side::after,
+.scheme-seats--second .scheme-seats__side::after,
+.scheme-seats--third .scheme-seats__side::after {
+  width: 3px;
+}
+
+.scheme-seats--fourth .scheme-seats__side {
+  position: relative;
+  padding-right: 12px;
+  padding-left: 6px;
+}
+
+.scheme-seats--fourth .scheme-seats__side::before {
+  position: absolute;
+  left: 0;
+  width: 5px;
+}
+
+.scheme-seats--fourth .scheme-seats__side::after {
+  position: absolute;
+  right: 0;
+  width: 5px;
+}
+
+.scheme-seats--fourth .scheme-seats__side--right::before {
+  top: 0;
+  height: 62px;
+}
+
+.scheme-seats--fourth .scheme-seats__side--right::after {
+  top: 0;
+  height: 62px;
+}
+
+.scheme-seats--fourth .scheme-seats__side--left {
+  align-items: flex-end;
+}
+
+.scheme-seats--fourth .scheme-seats__side--left::before {
+  bottom: 0;
+  width: 0;
+  height: 18px;
+}
+
+.scheme-seats--fourth .scheme-seats__side--left::after {
+  bottom: 0;
+  height: 18px;
+}
+
+.scheme-seats__placement {
+  flex: 1;
+  display: flex;
+  border-left: 2px solid #928F94;
+  border-right: 2px solid #928F94;
+}
+
+.scheme-seats__side--right .scheme-seats__placement {
+  justify-content: space-between;
+}
+
+.scheme-seats__col {
+  display: grid;
+}
+
+.scheme-seats--first .scheme-seats__col,
+.scheme-seats--second .scheme-seats__col {
+  border-bottom: 5px solid #928F94;
+}
+
+.scheme-seats--fourth .scheme-seats__col {
+  flex: 1;
+  gap: 2px 0;
+  padding: 4px 8px 4px 12px;
+}
+
+.scheme-seats__item {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  background: #E5E5E5;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.scheme-seats__item:disabled {
+  color: #E5E5E5;
+  background: #B5B5B5;
+  cursor: not-allowed;
+}
+
+.scheme-seats__item[data-selected="true"] {
+  border-color: #FFA800;
+}
+
+.scheme-seats--first .scheme-seats__item {
+  align-items: flex-end;
+}
+
+.scheme-seats--second .scheme-seats__item,
+.scheme-seats--third .scheme-seats__item,
+.scheme-seats--fourth .scheme-seats__item {
+  align-items: center;
+}
+
+.scheme-seats--first .scheme-seats__col .scheme-seats__item,
+.scheme-seats--second .scheme-seats__col .scheme-seats__item,
+.scheme-seats--third .scheme-seats__col .scheme-seats__item {
+  width: 26px;
+  height: 26px;
+}
+
+.scheme-seats--third .scheme-seats__placement > .scheme-seats__item {
+  flex: 1;
+}
+
+.scheme-seats__empty {
+  flex: 1;
+  margin-top: 6px;
+  border-top: 1px solid #E5E5E5;
+}

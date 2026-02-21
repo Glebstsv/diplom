@@ -40,3 +40,8 @@ a:hover {
 .main {
   padding-top: 95px;
 }
+
+.react-tooltip {
+  font-family: inherit;
+  z-index: 1000;
+}

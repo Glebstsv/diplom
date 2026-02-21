@@ -1,22 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 import SeatAmount from "./components/SeatAmount";
-import SeatCarriage from "./components/SeatCarriage/SeatCarriage";
-import SeatCarriageNumber from "./components/SeatCarriageNumber/SeatCarriageNumber";
 import SeatCarriageType from "./components/SeatCarriageType/SeatCarriageType";
 import SeatHeader from "./components/SeatHeader";
 import SeatTrainName from "./components/SeatTrainName";
-
+import CarriageDetails from "./components/CarriageDetails/CarriageDetails";
+import { getSeat, setSelectedClassType } from "../../shop/getTrainSeatSlice";
 import "./SeatSelection.css";
-import { getCarriageType, getSeat } from "../../shop/getTrainSeatSlice";
-import { useEffect, useState } from "react";
-import SeatAvailable from "./components/SeatAvailable/SeatAvailable";
 
 const SeatSelection = ({ train, route, direction }) => {
   const { departure, arrival } = useSelector((state) => state.trainSeat?.seat || { departure: [], arrival: [] });
-  const { type } = useSelector((state) => state.trainSeat?.type || []);
-  const selectedSeat = useSelector((state) => state.trainSeat?.selectedSeat || { departure: [], arrival: [] });
-  
-  const [carriageNumber, setCarriageNumber] = useState(false);
+  const { selectedClassType } = useSelector((state) => state.trainSeat || {});
+  const [showCarriageDetails, setShowCarriageDetails] = useState(false);
 
   const dispatch = useDispatch();
   
@@ -26,12 +21,9 @@ const SeatSelection = ({ train, route, direction }) => {
     }
   }, [train, direction, dispatch]);
 
-  const onClick = (e) => {
-    const { id } = e.currentTarget;
-    if (id) {
-      dispatch(getCarriageType(id));
-      setCarriageNumber(!carriageNumber);
-    }
+  const handleClassTypeSelect = (classType) => {
+    dispatch(setSelectedClassType(classType));
+    setShowCarriageDetails(true);
   };
 
   if (!train || !direction || !train[direction]) {
@@ -39,7 +31,6 @@ const SeatSelection = ({ train, route, direction }) => {
   }
 
   const currentSeat = direction === "departure" ? departure : arrival;
-  const currentSelectedSeat = direction === "departure" ? selectedSeat.departure : selectedSeat.arrival;
 
   return (
     <div className={`select-seat ${route}`}>
@@ -56,23 +47,17 @@ const SeatSelection = ({ train, route, direction }) => {
         duration={train[direction].duration}
       />
       <SeatAmount direction={direction} />
+      
       <SeatCarriageType
         seat={train[direction].available_seats_info || {}}
-        onClick={onClick}
+        onSelect={handleClassTypeSelect}
+        selectedType={selectedClassType}
       />
-      {carriageNumber && currentSeat?.length > 0 && (
-        <SeatCarriageNumber
-          seat={currentSeat}
-          direction={direction}
-        />
-      )}
-      {currentSelectedSeat?.coach && (
-        <SeatCarriage carriage={currentSelectedSeat} type={type} />
-      )}
-      {currentSelectedSeat?.coach && (
-        <SeatAvailable
-          carriage={currentSelectedSeat}
-          type={type}
+      
+      {showCarriageDetails && selectedClassType && currentSeat?.length > 0 && (
+        <CarriageDetails
+          carriages={currentSeat}
+          classType={selectedClassType}
           direction={direction}
         />
       )}

@@ -1,0 +1,81 @@
+.seat-carriage-type {
+  margin-bottom: 30px;
+}
+
+.carriage-type-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.carriage-types {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.carriage-type-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 100px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.carriage-type-button:hover {
+  border-color: #ffa800;
+  box-shadow: 0 2px 8px rgba(255, 168, 0, 0.2);
+}
+
+.carriage-type-button.active {
+  border-color: #ffa800;
+}
+
+.carriage-type-img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.carriage-type-img.lux {
+  background-image: url('../../../../assets/seat-select/lux.png');
+}
+
+.carriage-type-img.coupe {
+  background-image: url('../../../../assets/seat-select/coupe.png');
+}
+
+.carriage-type-img.res {
+  background-image: url('../../../../assets/seat-select/reserved.png');
+}
+
+.carriage-type-img.sed {
+  background-image: url('../../../../assets/seat-select/seat.png');
+}
+
+.carriage-type-img.lux.active,
+.carriage-type-img.coupe.active,
+.carriage-type-img.res.active,
+.carriage-type-img.sed.active {
+  filter: brightness(0) invert(1);
+}
+
+.carriage-type-subtitle {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+}
+
+.carriage-type-subtitle.active {
+  color: #333;
+}
